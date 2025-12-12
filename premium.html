@@ -1,63 +1,70 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Premium — PulseBoost</title>
-  <meta name="description" content="PulseBoost Premium plans.">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
-
-<header class="nav">
-  <div class="container navbar">
-    <a class="brand" href="./index.html"><span class="logo"></span><span>PulseBoost</span></a>
-    <nav class="navlinks" data-nav>
-      <a href="./download.html">Download</a>
-      <a href="./premium.html">Premium</a>
-      <a href="./games.html">Games</a>
-      <a href="./how.html">How it works</a>
-      <a href="./contact.html">Contact</a>
-      <a class="btn primary" href="./download.html">Download</a>
-    </nav>
-    <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
-  </div>
-  <div class="container mobile-panel" id="mobilePanel" data-nav>
-    <a href="./download.html">Download</a><a href="./premium.html">Premium</a><a href="./games.html">Games</a><a href="./how.html">How it works</a><a href="./contact.html">Contact</a>
-  </div>
-</header>
-
-<main class="container">
-  <div class="spacer"></div>
-
-  <section class="card pad">
-    <div class="pill"><span class="dot"></span> Premium</div>
-    <h1>Choose your plan</h1>
-    <p>Keep it simple: start free, upgrade if you want more presets and customization.</p>
-
-    <table class="table">
-      <thead>
-        <tr><th>Feature</th><th>Free</th><th>Premium</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Starter optimizations</td><td>✓</td><td>✓</td></tr>
-        <tr><td>Game presets</td><td>Basic</td><td>Extended</td></tr>
-        <tr><td>Custom presets</td><td>Limited</td><td>More</td></tr>
-        <tr><td>Support</td><td>Community</td><td>Priority</td></tr>
-        <tr><td>Ads</td><td>Yes</td><td>No</td></tr>
-      </tbody>
-    </table>
-
-    <div class="actions" style="margin-top:14px">
-      <a class="btn primary" href="./download.html">Start free</a>
-      <a class="btn" href="./contact.html" onclick="alert('Premium checkout coming soon.');return false;">Unlock Premium</a>
+  <header class="nav">
+    <div class="container nav-inner" data-nav>
+      <a class="brand" href="./index.html"><span class="logo"></span><span>PulseBoost</span></a>
+      <nav class="navlinks">
+        <a href="./download.html">Download</a><a href="./premium.html">Premium</a><a href="./games.html">Games</a><a href="./how.html">How it works</a><a href="./contact.html">Contact</a>
+        <a class="btn primary nav-cta" href="./premium.html">Go Premium</a>
+      </nav>
+      <button class="btn menu-btn" data-menu-btn aria-expanded="false">Menu</button>
     </div>
+    <div class="container mobile" data-mobile hidden>
+      <a href="./download.html">Download</a><a href="./premium.html">Premium</a><a href="./games.html">Games</a><a href="./how.html">How it works</a><a href="./contact.html">Contact</a>
+    </div>
+  </header>
 
-    <p class="small" style="margin-top:10px">We can wire real payments later. For now this is a clean marketing page.</p>
-  </section>
-</main>
+  <main class="container">
+    <section class="hero">
+      <div class="card pad">
+        <div class="kicker"><span class="dot"></span> Premium</div>
+        <h1>Extra power for competitive players.</h1>
+        <p class="lead">Start free. Upgrade when you want more control and stronger optimization presets.</p>
 
-<footer class="footer container">© <span id="year"></span> PulseBoost</footer>
-<script src="./app.js"></script>
+        <div class="pricing">
+          <div class="plan">
+            <div class="kicker" style="letter-spacing:.08em">Free</div>
+            <div class="price">$0</div>
+            <p class="muted">Great for most players.</p>
+            <ul class="list">
+              <li><span class="tick"></span><span>Basic FPS + stability boosts</span></li>
+              <li><span class="tick"></span><span>Safe defaults</span></li>
+              <li><span class="tick"></span><span>Rollback anytime</span></li>
+            </ul>
+            <div class="actions" style="margin-top:14px">
+              <a class="btn" href="./download.html">Download Free</a>
+            </div>
+          </div>
+
+          <div class="plan featured">
+            <div class="kicker" style="letter-spacing:.08em">Premium</div>
+            <div class="price">$6 <span class="small">/ month</span></div>
+            <p class="muted">For serious competitive gaming.</p>
+            <ul class="list">
+              <li><span class="tick"></span><span>Stronger performance presets</span></li>
+              <li><span class="tick"></span><span>More controls + profiles</span></li>
+              <li><span class="tick"></span><span>Priority support</span></li>
+            </ul>
+            <div class="actions" style="margin-top:14px">
+              <a class="btn primary" href="#" onclick="alert('Later connect Stripe/PayPal.');return false;">Upgrade</a>
+              <a class="btn ghost" href="./contact.html">Questions?</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="footer">© PulseBoost</div>
+  </main>
+
+  <script src="./app.js"></script>
 </body>
 </html>

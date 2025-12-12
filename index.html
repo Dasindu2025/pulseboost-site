@@ -1,114 +1,130 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>PulseBoost — Optimize your PC for gaming</title>
-  <meta name="description" content="PulseBoost boosts FPS, reduces lag, and keeps your gameplay smooth. Built for the gaming community.">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style.css" />
 </head>
 <body>
+  <header class="nav">
+    <div class="container nav-inner" data-nav>
+      <a class="brand" href="./index.html"><span class="logo"></span><span>PulseBoost</span></a>
 
-<header class="nav">
-  <div class="container navbar">
-    <a class="brand" href="./index.html"><span class="logo"></span><span>PulseBoost</span></a>
+      <nav class="navlinks">
+        <a href="./download.html">Download</a>
+        <a href="./premium.html">Premium</a>
+        <a href="./games.html">Games</a>
+        <a href="./how.html">How it works</a>
+        <a href="./contact.html">Contact</a>
+        <a class="btn primary nav-cta" href="./download.html">Download PulseBoost</a>
+      </nav>
 
-    <nav class="navlinks" data-nav>
+      <button class="btn menu-btn" data-menu-btn aria-expanded="false">Menu</button>
+    </div>
+
+    <div class="container mobile" data-mobile hidden>
       <a href="./download.html">Download</a>
       <a href="./premium.html">Premium</a>
       <a href="./games.html">Games</a>
       <a href="./how.html">How it works</a>
       <a href="./contact.html">Contact</a>
-      <a class="btn primary" href="./download.html">Download PulseBoost</a>
-    </nav>
-
-    <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
-  </div>
-
-  <div class="container mobile-panel" id="mobilePanel" data-nav>
-    <a href="./download.html">Download</a>
-    <a href="./premium.html">Premium</a>
-    <a href="./games.html">Games</a>
-    <a href="./how.html">How it works</a>
-    <a href="./contact.html">Contact</a>
-  </div>
-</header>
-
-<main class="container">
-  <section class="hero">
-    <div class="card pad">
-      <div class="pill"><span class="dot"></span> Built for gamers</div>
-      <h1>Optimize your PC for gaming.</h1>
-      <p>PulseBoost helps you boost FPS, reduce stutters, and keep your gameplay smooth — without confusing tech talk.</p>
-
-      <div class="actions">
-        <a class="btn primary" href="./download.html">Download PulseBoost</a>
-        <a class="btn" href="./how.html">How it works</a>
-      </div>
-
-      <div class="kpi">
-        <div class="chip">Windows 10/11</div>
-        <div class="chip">Safe & reversible</div>
-        <div class="chip">Community-first</div>
-      </div>
     </div>
+  </header>
 
-    <div class="card pad">
-      <h2>What you get</h2>
-      <div class="grid3">
-        <div class="tile">
-          <h3>Boost FPS</h3>
-          <p>Reduce common causes of frame drops and improve consistency.</p>
+  <main class="container">
+    <section class="hero">
+      <div class="hero-grid">
+        <div class="card pad">
+          <div class="kicker"><span class="dot"></span> Built for gamers • Windows 10/11</div>
+          <h1>Boost FPS. Reduce stutter. Play smoother.</h1>
+          <p class="lead">PulseBoost helps your PC stay focused during matches with clean, safe optimizations — no confusing tech talk.</p>
+
+          <div class="actions">
+            <a class="btn primary" href="./download.html">Download PulseBoost</a>
+            <a class="btn" href="./how.html">How it works</a>
+            <a class="btn ghost" href="./premium.html">Go Premium</a>
+          </div>
+
+          <div class="chips">
+            <span class="chip">One-click setup</span>
+            <span class="chip">Safe & reversible</span>
+            <span class="chip">Made for competitive play</span>
+          </div>
         </div>
-        <div class="tile">
-          <h3>Reduce lag</h3>
-          <p>Help your system stay focused during matches and fights.</p>
+
+        <div class="card pad">
+          <h2>What you get</h2>
+          <p class="muted">Simple features that actually matter to gamers.</p>
+          <div class="grid3" style="margin-top:12px">
+            <div class="tile">
+              <h3>FPS consistency</h3>
+              <p>Reduce spikes and keep frames steadier in fights.</p>
+            </div>
+            <div class="tile">
+              <h3>Lower input delay</h3>
+              <p>Help your system prioritize game + peripherals.</p>
+            </div>
+            <div class="tile">
+              <h3>Stable performance</h3>
+              <p>Clean changes with easy rollback when you want.</p>
+            </div>
+          </div>
+
+          <hr class="sep" />
+
+          <h2>Popular games</h2>
+          <div class="games-strip">
+            <div class="game"><b>VALORANT</b><span>Competitive</span></div>
+            <div class="game"><b>Fortnite</b><span>Battle Royale</span></div>
+            <div class="game"><b>CS2</b><span>Competitive</span></div>
+            <div class="game"><b>Apex</b><span>BR / Arena</span></div>
+            <div class="game"><b>Roblox</b><span>Low-end boost</span></div>
+            <div class="game"><b>League</b><span>MOBA</span></div>
+          </div>
+
+          <div class="actions" style="margin-top:14px">
+            <a class="btn primary" href="./download.html">Get it now</a>
+            <a class="btn" href="./games.html">See supported games</a>
+          </div>
         </div>
-        <div class="tile">
-          <h3>Stay safe</h3>
-          <p>Changes are designed to be reversible. You stay in control.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="card pad">
+        <h2>Why gamers like it</h2>
+        <div class="grid3" style="margin-top:12px">
+          <div class="tile">
+            <h3>Fast setup</h3>
+            <p>Install → click → done. No tweaking rabbit hole.</p>
+          </div>
+          <div class="tile">
+            <h3>Clean UI</h3>
+            <p>Everything is simple. You always know what you changed.</p>
+          </div>
+          <div class="tile">
+            <h3>Control</h3>
+            <p>Use safe mode, or rollback any time. Your PC stays yours.</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section class="section">
-    <div class="section-title">
-      <h2>Trusted by the community</h2>
-      <p class="small">Add Discord + reviews later (we’ll connect when ready).</p>
-    </div>
-    <div class="grid3">
-      <div class="tile"><h3>Community support</h3><p>Get help, share settings, and request game presets.</p></div>
-      <div class="tile"><h3>New games added</h3><p>We keep improving and expanding supported games list.</p></div>
-      <div class="tile"><h3>Simple UI</h3><p>Focused on results: smoother gameplay, less lag, more fun.</p></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="card pad">
-      <div class="section-title">
-        <h2>Popular games</h2>
-        <p class="small"><a class="btn ghost" href="./games.html">View all</a></p>
+    <section class="section">
+      <div class="card pad">
+        <h2>Ready to boost?</h2>
+        <p class="muted">Start free, upgrade later if you want extra power.</p>
+        <div class="actions">
+          <a class="btn primary" href="./download.html">Download PulseBoost</a>
+          <a class="btn" href="./premium.html">Premium plans</a>
+        </div>
       </div>
-      <div class="games-row">
-        <div class="game"><span>VALORANT</span></div>
-        <div class="game"><span>FORTNITE</span></div>
-        <div class="game"><span>CS2</span></div>
-        <div class="game"><span>ROBLOX</span></div>
-        <div class="game"><span>APEX</span></div>
-        <div class="game"><span>LEAGUE</span></div>
-      </div>
+    </section>
 
-      <hr class="sep">
-      <div class="actions">
-        <a class="btn primary" href="./download.html">Start free download</a>
-        <a class="btn" href="./premium.html">See Premium</a>
-      </div>
-    </div>
-  </section>
-</main>
+    <div class="footer">© PulseBoost</div>
+  </main>
 
-<footer class="footer container">© <span id="year"></span> PulseBoost</footer>
-<script src="./app.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>
