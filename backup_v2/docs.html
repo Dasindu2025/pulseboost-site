@@ -1,0 +1,60 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Docs • Hela Optimizer</title>
+  <meta name="description" content="Documentation for Hela Optimizer: architecture, modules, safety." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="top-glow"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="./index.html"><span class="logo"></span><span>Hela Optimizer</span></a>
+      <nav class="nav-links" data-nav>
+        <a href="./index.html">Home</a><a href="./features.html">Features</a><a href="./pricing.html">Pricing</a>
+        <a href="./docs.html">Docs</a><a href="./download.html">Download</a><a href="./contact.html">Contact</a>
+      </nav>
+      <div class="nav-cta"><button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button></div>
+    </div>
+    <div class="container mobile-panel" id="mobilePanel" data-nav>
+      <a href="./index.html">Home</a><a href="./features.html">Features</a><a href="./pricing.html">Pricing</a>
+      <a href="./docs.html">Docs</a><a href="./download.html">Download</a><a href="./contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <section class="card fade-up">
+      <div class="kicker"><span class="kicker-dot"></span> Docs</div>
+      <h1>Getting started</h1>
+      <p>This is a clean documentation shell. Next we’ll paste your v1.0 whitepaper content and format it beautifully.</p>
+    </section>
+
+    <section class="card soft fade-up d2" style="margin-top:16px;">
+      <h2>Core modules</h2>
+      <table class="table">
+        <thead><tr><th>Module</th><th>What it does</th></tr></thead>
+        <tbody>
+          <tr><td>Data Collection</td><td>Collects Windows telemetry (ETW/WMI/PDH) + GPU signals.</td></tr>
+          <tr><td>Feature Engineering</td><td>Rolling stats, baselines, anomaly signals.</td></tr>
+          <tr><td>AI/ML Engine</td><td>Real-time inference via ONNX Runtime (DirectML).</td></tr>
+          <tr><td>Optimization Controller</td><td>Applies safe actions + rollback.</td></tr>
+          <tr><td>User Interface</td><td>Status, controls, and feedback capture.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="hr"></div>
+      <h2>Next step</h2>
+      <p>Send me your final whitepaper text and I’ll turn this into proper docs sections (Architecture, Safety, Models, Roadmap).</p>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div>© <span id="year"></span> Hela Optimizer</div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

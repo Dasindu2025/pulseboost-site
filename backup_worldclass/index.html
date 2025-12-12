@@ -1,0 +1,79 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PulseBoost</title>
+  <meta name="description" content="PulseBoost predicts Windows performance bottlenecks and applies safe optimizations with rollback-first safety." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container navbar">
+      <a class="brand" href="./index.html">
+        <span class="logo"></span>
+        <span>PulseBoost</span>
+      </a>
+
+      <nav class="navlinks" data-nav>
+        <a href="./index.html">Home</a>
+        <a href="./features.html">Features</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./docs.html">Docs</a>
+        <a href="./download.html">Download</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+    </div>
+
+    <div class="container mobile-panel" id="mobilePanel" data-nav>
+      <a href="./index.html">Home</a>
+      <a href="./features.html">Features</a>
+      <a href="./pricing.html">Pricing</a>
+      <a href="./docs.html">Docs</a>
+      <a href="./download.html">Download</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card">
+        <div class="kicker"><span class="dot"></span> Early Preview</div>
+        <h1>Predict bottlenecks. Boost performance. Stay safe.</h1>
+        <p>
+          PulseBoost uses Windows telemetry and ML to detect what’s slowing you down and recommend
+          the safest optimizations — always with rollback-first guardrails.
+        </p>
+
+        <div class="actions">
+          <a class="btn primary" href="./download.html">Get PulseBoost</a>
+          <a class="btn" href="./docs.html">Read docs</a>
+        </div>
+
+        <div class="tags">
+          <span class="tag">Rollback-first safety</span>
+          <span class="tag">ETW/WMI/PDH + GPU</span>
+          <span class="tag">ONNX + DirectML</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>What you get</h2>
+        <div class="list">
+          <div class="item"><b>Clean recommendations</b><span>Only the next best action — no noisy lists.</span></div>
+          <div class="item"><b>Low overhead telemetry</b><span>Designed to stay lightweight.</span></div>
+          <div class="item"><b>Trust & control</b><span>Explain → apply → rollback anytime.</span></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    © <span id="year"></span> PulseBoost
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

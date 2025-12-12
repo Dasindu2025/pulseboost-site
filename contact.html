@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — PulseBoost</title>
+  <meta name="description" content="Contact PulseBoost and join the community.">
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="container navbar">
+    <a class="brand" href="./index.html"><span class="logo"></span><span>PulseBoost</span></a>
+    <nav class="navlinks" data-nav>
+      <a href="./download.html">Download</a>
+      <a href="./premium.html">Premium</a>
+      <a href="./games.html">Games</a>
+      <a href="./how.html">How it works</a>
+      <a href="./contact.html">Contact</a>
+      <a class="btn primary" href="./download.html">Download</a>
+    </nav>
+    <button class="btn menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+  </div>
+  <div class="container mobile-panel" id="mobilePanel" data-nav>
+    <a href="./download.html">Download</a><a href="./premium.html">Premium</a><a href="./games.html">Games</a><a href="./how.html">How it works</a><a href="./contact.html">Contact</a>
+  </div>
+</header>
+
+<main class="container">
+  <div class="spacer"></div>
+
+  <section class="card pad">
+    <div class="pill"><span class="dot"></span> Contact</div>
+    <h1>Talk to us</h1>
+    <p>Have a question, a bug, or want a game added? Send a message.</p>
+
+    <form class="form" onsubmit="event.preventDefault(); alert('Sent (demo). Connect real email later.');">
+      <input class="input" placeholder="Your name" required>
+      <input class="input" type="email" placeholder="Your email" required>
+      <textarea placeholder="Your message..." required></textarea>
+      <button class="btn primary" type="submit">Send message</button>
+      <div class="small">Next step: we can connect Firebase Functions to send real emails.</div>
+    </form>
+
+    <hr class="sep">
+    <h2>Community</h2>
+    <p>We’ll add your Discord invite link here when ready.</p>
+    <a class="btn" href="#" onclick="alert('Add Discord invite link later');return false;">Join Discord</a>
+  </section>
+<section class="card pad" style="margin-top:16px">
+  <div class="pill"><span class="dot"></span> Account</div>
+  <h2>Sign in</h2>
+  <p class="small">Optional login for community features and syncing later.</p>
+
+  <div class="actions">
+    <button id="loginGoogle" class="btn primary" type="button">Sign in with Google</button>
+    <button id="logoutBtn" class="btn" type="button">Logout</button>
+  </div>
+
+  <p id="userStatus" class="small">Not logged in</p>
+</section>
+
+<script type="module">
+  import { auth, googleProvider } from './firebase.js';
+  import { signInWithPopup, signOut, onAuthStateChanged }
+    from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+  document.getElementById("loginGoogle").addEventListener("click", async () => {
+    await signInWithPopup(auth, googleProvider);
+  });
+
+  document.getElementById("logoutBtn").addEventListener("click", async () => {
+    await signOut(auth);
+  });
+
+  onAuthStateChanged(auth, (user) => {
+    document.getElementById("userStatus").textContent =
+      user ? `Logged in as ${user.displayName}` : "Not logged in";
+  });
+</script>
+
+</main>
+
+<footer class="footer container">© <span id="year"></span> PulseBoost</footer>
+<script src="./app.js"></script>
+</body>
+</html>

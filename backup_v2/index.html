@@ -1,0 +1,110 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hela Optimizer</title>
+  <meta name="description" content="AI-powered Windows performance optimizer. Predict bottlenecks, apply safe optimizations, and keep your system stable." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <div class="top-glow"></div>
+
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="./index.html">
+        <span class="logo"></span>
+        <span>Hela Optimizer</span>
+      </a>
+
+      <nav class="nav-links" data-nav>
+        <a href="./index.html">Home</a>
+        <a href="./features.html">Features</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./docs.html">Docs</a>
+        <a href="./download.html">Download</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobilePanel">Menu</button>
+      </div>
+    </div>
+
+    <div class="container mobile-panel" id="mobilePanel" data-nav>
+      <a href="./index.html">Home</a>
+      <a href="./features.html">Features</a>
+      <a href="./pricing.html">Pricing</a>
+      <a href="./docs.html">Docs</a>
+      <a href="./download.html">Download</a>
+      <a href="./contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="container hero">
+    <div class="hero-grid">
+      <section class="card fade-up">
+        <div class="kicker"><span class="kicker-dot"></span> Hela Dev • Early Preview</div>
+        <h1>AI-powered Windows performance optimizer</h1>
+        <p>
+          Predict bottlenecks, apply safe optimizations, and keep your system stable.
+          Built for Windows telemetry, low-latency inference, and rollback-first safety.
+        </p>
+
+        <div class="btn-row">
+          <a class="btn primary" href="./download.html">Get the installer</a>
+          <a class="btn ghost" href="./docs.html">Read the docs</a>
+        </div>
+
+        <div class="badges">
+          <span class="badge ok"><b>Safe Mode</b> guardrails + rollback</span>
+          <span class="badge"><b>Telemetry</b> ETW/WMI/PDH + GPU</span>
+          <span class="badge"><b>ML</b> ONNX + DirectML</span>
+        </div>
+      </section>
+
+      <aside class="card soft fade-up d2">
+        <h2>What you get</h2>
+        <div class="tile">
+          <h3>Telemetry (low overhead)</h3>
+          <p>Signals are sampled to stay lightweight while still being useful for prediction.</p>
+        </div>
+        <div class="hr"></div>
+        <div class="tile">
+          <h3>Prediction → Action</h3>
+          <p>Detect what hurts performance and recommend the safest next step.</p>
+        </div>
+        <div class="hr"></div>
+        <div class="tile">
+          <h3>Rollback-first safety</h3>
+          <p>Every change is reversible. You stay in control.</p>
+        </div>
+      </aside>
+    </div>
+
+    <section class="card soft fade-up d3" style="margin-top:16px;">
+      <h2>Use cases</h2>
+      <div class="grid" style="margin-bottom:0;">
+        <div class="tile">
+          <h3>Gaming</h3>
+          <p>Reduce spikes, improve consistency, and prioritize what matters.</p>
+        </div>
+        <div class="tile">
+          <h3>Creators</h3>
+          <p>Keep render/encode workloads stable by limiting contention.</p>
+        </div>
+        <div class="tile">
+          <h3>Workstations</h3>
+          <p>Maintain responsiveness under heavy multitasking and heat.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <div>© <span id="year"></span> Hela Optimizer • Built on Firebase Hosting</div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
