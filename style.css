@@ -270,3 +270,95 @@ textarea{min-height:120px; resize:vertical}
 @media (prefers-reduced-motion: reduce){
   *{transition:none!important; scroll-behavior:auto!important}
 }
+
+/* ===== MOBILE POLISH PATCH (PulseBoost) ===== */
+
+/* Prevent random horizontal scrolling on phones */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* Make containers breathe on small screens */
+@media (max-width: 560px){
+  .container{ width: calc(100% - 26px); }
+  .pad{ padding:16px; }
+  .hero{ padding:22px 0 10px; }
+}
+
+/* Better typography scaling */
+h1{
+  font-size: clamp(30px, 7vw, 48px);
+  line-height: 1.08;
+}
+.lead{ font-size: 15px; }
+
+/* Make CTA buttons friendly on mobile */
+@media (max-width: 560px){
+  .actions{ gap:10px; }
+  .actions .btn{ width:100%; justify-content:center; }
+  .btn{ padding:12px 14px; }
+}
+
+/* Make the 2-column inputs stack on mobile (contact form) */
+@media (max-width: 700px){
+  form > div[style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Pricing cards spacing */
+@media (max-width: 560px){
+  .pricing{ gap:12px; }
+  .plan{ padding:16px; }
+  .price{ font-size:30px; }
+}
+
+/* Games strip: smooth swipe + always visible scrollbar behavior */
+.games-strip{
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.games-strip::-webkit-scrollbar{ display:none; }
+
+/* Tiles readable on mobile */
+@media (max-width: 560px){
+  .tile{ padding:14px; }
+  .tile h3{ font-size:15px; }
+  .tile p{ font-size:13.5px; }
+}
+
+/* Mobile menu tap targets */
+@media (max-width: 920px){
+  .mobile a{ padding:14px 14px; }
+  .menu-btn{ padding:10px 14px; }
+}
+
+/* ===== END MOBILE POLISH PATCH ===== */
+
+/* ===== HOME RESPONSIVE FIX ===== */
+
+/* Ensure grids can actually shrink on mobile */
+.hero-grid, .grid3, .pricing { min-width: 0; }
+.card, .tile { min-width: 0; }
+
+/* Force Home hero to single-column earlier (tablets + phones) */
+@media (max-width: 1024px){
+  .hero-grid{ grid-template-columns: 1fr !important; }
+}
+
+/* Reduce padding and make layout breathe on small screens */
+@media (max-width: 560px){
+  .hero{ padding: 18px 0 8px !important; }
+  .pad{ padding: 14px !important; }
+  .chips, .actions{ width:100%; }
+  .chips .chip{ width:100%; justify-content:center; }
+}
+
+/* Prevent any child from pushing page wider than the screen */
+.hero, .hero *{ max-width: 100%; }
+.hero-grid > *{ overflow: hidden; }
+
+/* Buttons: full-width on mobile */
+@media (max-width: 560px){
+  .actions .btn{ width:100% !important; }
+}
+
+/* ===== END HOME RESPONSIVE FIX ===== */
