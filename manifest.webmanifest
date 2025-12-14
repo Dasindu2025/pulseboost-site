@@ -1,0 +1,11 @@
+﻿{
+  "name": "PulseBoost",
+  "short_name": "PulseBoost",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#070B14",
+  "theme_color": "#070B14",
+  "icons": [
+    { "src": "/assets/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

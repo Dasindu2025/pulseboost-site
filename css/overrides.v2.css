@@ -1,0 +1,16 @@
+﻿/* =========================================================
+   OVERRIDES v2 — TOPBAR: ONLY HAMBURGER (ALL DEVICES)
+   ========================================================= */
+
+.topbarActions > *{ display:none !important; }
+.topbarActions > .menuBtn{ display:inline-flex !important; }
+
+.menuBtn{
+  width:44px !important;
+  height:44px !important;
+  border-radius:999px !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+html, body{ overflow-x:hidden !important; }

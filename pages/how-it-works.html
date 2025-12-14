@@ -1,0 +1,224 @@
+﻿<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>How it Works — PulseBoost</title>
+  <meta name="description" content="Telemetry → baseline → bottleneck inference → bounded reversible actions. Includes diagnostics & explainability." />
+    <meta name="theme-color" content="#070B14" />
+  <meta name="color-scheme" content="dark light" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PulseBoost" />
+  <meta property="og:title" content="PulseBoost — AI Performance Optimizer" />
+  <meta property="og:description" content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PulseBoost — AI Performance Optimizer" />
+  <meta name="twitter:description" content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="../manifest.webmanifest" />
+<link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/overrides.v2.css" />
+</head>
+<body>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="topbar">
+  <div class="container topbarShell">
+    <div class="topbarRow">
+      <a class="brand" href="../index.html" aria-label="PulseBoost home">
+        <span class="logo" aria-hidden="true"></span>
+        <span class="brandText">
+          <b>PulseBoost</b>
+          <span>AI Performance Optimizer</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Primary">
+        <a href="../index.html">Home</a>
+        <a href="./how-it-works.html" aria-current="page">How it works</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./games.html">Games</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <div class="topbarActions">
+        <button class="menuBtn" type="button" data-action="openDrawer" aria-label="Open menu">
+          <span class="menuIcon" aria-hidden="true"><span></span><span></span><span></span></span>
+        </button>
+        <button class="chipBtn" type="button" data-action="toggleTheme">Theme <span class="kbd">T</span></button>
+        <button class="chipBtn" type="button" data-action="openPalette">Search <span class="kbd">Ctrl</span><span class="kbd">K</span></button>
+        <a class="btn primary" href="./download.html">Download</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="container hero">
+  <span class="badge"><span class="dot"></span> SYSTEM ARCHITECTURE</span>
+  <h1 class="h1">From raw signals to stable frames</h1>
+  <p class="p">PulseBoost operates as a closed-loop optimization system. It observes, predicts, acts — and stays reversible. Below is the pipeline, plus diagnostics and explainability outputs you can copy and share.</p>
+
+  <section class="section">
+    <h2 class="h2">Optimization pipeline</h2>
+    <div class="miniGrid">
+      <div class="mini"><span class="small">STEP 01</span><b>Telemetry ingestion</b><div class="small">Low-overhead signals via native Windows APIs: scheduling, GPU queues, memory pressure, pacing.</div></div>
+      <div class="mini"><span class="small">STEP 02</span><b>Baseline modeling</b><div class="small">Learns your normal band. Deviations matter more than raw usage numbers.</div></div>
+      <div class="mini"><span class="small">STEP 03</span><b>Bottleneck inference</b><div class="small">Predicts the likely cause: CPU contention, queue starvation, background interference.</div></div>
+      <div class="mini"><span class="small">STEP 04</span><b>Reversible action</b><div class="small">Applies the smallest safe change, constrained by guardrails and rollback.</div></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="h2">Safety & control model</h2>
+    <div class="cols">
+      <div class="feature"><div class="title"><span class="icon"></span> Rollback always</div><div class="small">Every action is tracked and can be reverted instantly.</div></div>
+      <div class="feature"><div class="title"><span class="icon"></span> No driver hacks</div><div class="small">No unsigned drivers. No kernel hooks. No injection.</div></div>
+      <div class="feature"><div class="title"><span class="icon"></span> Bounded envelopes</div><div class="small">Models operate inside safe action ranges. Out-of-policy actions are rejected.</div></div>
+    </div>
+  </section>
+
+  <!-- 4) Diagnostics / Explainability -->
+  <section class="section diagCard" aria-label="Diagnostics and explainability">
+    <h2 class="h2">Diagnostics & explainability</h2>
+    <p class="p">PulseBoost produces a compact “decision packet” you can paste into bug reports, Discord, or support. Copy templates below.</p>
+
+    <div class="section">
+      <div class="codeTop">
+        <b>Quick Diagnostic Template</b>
+        <button class="btn" type="button" data-action="copyDiag" data-target="#diagQuick">Copy</button>
+      </div>
+      <pre class="codeBox" id="diagQuick">[PulseBoost Diagnostic]
+Time: 2025-12-14 00:00 (local)
+Mode: Monitoring + Guardrails
+Game/Profile: (fill)
+Baseline band: (fill)
+Deviation: frame pacing drift / stutter signature
+Predicted cause: CPU contention | GPU queue starvation | background interference
+Action applied: priority rebalance | scheduler hint | isolation adjustment
+Rollback: available (true)
+Outcome: stability restored (yes/no)
+Notes: (fill)</pre>
+    </div>
+
+    <div class="section">
+      <div class="codeTop">
+        <b>Decision Packet (Explainability)</b>
+        <button class="btn" type="button" data-action="copyDiag" data-target="#diagPacket">Copy</button>
+      </div>
+      <pre class="codeBox" id="diagPacket">{
+  "event_id": "pb_evt_3f12",
+  "signal_window_ms": 6000,
+  "baseline": {
+    "fps_band": [108, 122],
+    "pacing_ms_p95": 11.2
+  },
+  "deviation": {
+    "pacing_ms_p95": 25.4,
+    "signature": "micro-stutter burst"
+  },
+  "inference": {
+    "primary": "cpu_contention",
+    "confidence": 0.82,
+    "evidence": ["main-thread stalls", "background cpu spikes", "scheduler latency up"]
+  },
+  "action": {
+    "type": "priority_rebalance",
+    "bounded": true,
+    "rollback_id": "pb_rb_9ac1"
+  },
+  "verification": {
+    "pacing_ms_p95_after": 12.1,
+    "stable": true
+  }
+}</pre>
+    </div>
+
+    <div class="section">
+      <div class="row wrap">
+        <a class="btn primary" href="./download.html">Download</a>
+        <a class="btn" href="./games.html">Open Games Lab</a>
+        <a class="btn" href="./contact.html">Send diagnostics</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Drawer -->
+<div class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawerBg"></div>
+  <div class="drawerPanel" role="dialog" aria-modal="true" aria-label="Menu">
+    <div class="drawerTop">
+      <div class="drawerTitle">PulseBoost</div>
+      <button class="drawerClose" type="button" data-action="closeDrawer" aria-label="Close menu">✕</button>
+    </div>
+    <div class="drawerBody">
+      <nav class="drawerNav" aria-label="Mobile">
+        <a href="../index.html">Home</a>
+        <a href="./how-it-works.html">How it works</a>
+        <a href="./pricing.html">Pricing</a>
+        <a href="./games.html">Games</a>
+        <a href="./contact.html">Contact</a>
+        <a href="./download.html">Download</a>
+      </nav>
+    </div>
+    <div class="drawerActions">
+      <button class="btn ghost" type="button" data-action="toggleTheme">Theme</button>
+      <button class="btn" type="button" data-action="openPalette">Search</button>
+      <a class="btn primary" href="./download.html">Download</a>
+    </div>
+  </div>
+</div>
+
+<div class="drawer" id="palette" data-open="false" aria-hidden="true">
+  <div class="drawerBg" data-action="closePalette"></div>
+  <div class="drawerPanel" role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="drawerTop">
+      <div class="drawerTitle">Command palette</div>
+      <button class="drawerClose" type="button" data-action="closePalette" aria-label="Close palette">✕</button>
+    </div>
+    <div class="drawerBody">
+      <input id="palInput" class="chipBtn" style="width:100%; justify-content:flex-start" placeholder="Type to filter (docs, pricing, games...)" />
+      <div style="height:12px"></div>
+      <div class="drawerNav">
+        <a data-cmd="home" href="../index.html">Go: Home</a>
+        <a data-cmd="how docs pipeline diagnostics" href="./how-it-works.html">Go: How it works</a>
+        <a data-cmd="pricing plans matrix" href="./pricing.html">Go: Pricing</a>
+        <a data-cmd="games lab profiles" href="./games.html">Go: Games</a>
+        <a data-cmd="contact support" href="./contact.html">Go: Contact</a>
+        <a data-cmd="download windows" href="./download.html">Go: Download</a>
+      </div>
+    </div>
+    <div class="drawerActions">
+      <button class="btn ghost" type="button" data-action="toggleTheme">Toggle theme</button>
+      <a class="btn primary" href="./download.html">Download</a>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" aria-live="polite"></div>
+
+<footer>
+  <div class="container footerRow">
+    <div class="small"><b>PulseBoost</b> <span class="subtle">— Explainable optimization • reversible actions • guardrails.</span></div>
+    <div class="footerLinks">
+      <a href="../index.html">Home</a>
+      <a href="./pricing.html">Pricing</a>
+      <a href="./games.html">Games</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./download.html">Download</a>
+          <a href="./security.html">Security</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="./changelog.html">Changelog</a>
+</div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+</body>
+</html>
+
+
+
+

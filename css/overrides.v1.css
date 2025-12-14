@@ -1,0 +1,54 @@
+﻿/* =========================================================
+   OVERRIDES (cache-busted) — KEEP ONLY HAMBURGER MENU
+   Applies to ALL screens + ALL pages
+   ========================================================= */
+
+/* Kill any topbar action buttons everywhere */
+.topbarActions .chipBtn,
+.topbarActions .btn,
+.topbarActions a.btn,
+.topbarActions button.btn,
+.topbarActions [class*="chip"],
+.topbarActions [class*="kbd"],
+.topbarActions [data-action="toggleTheme"],
+.topbarActions [data-action="openPalette"],
+.topbarActions [data-action="download"],
+.topbarActions a[href*="download"],
+.topbarActions a[href*="pricing"],
+.topbarActions a[href*="games"],
+.topbarActions a[href*="contact"],
+.topbarActions a[href*="how-it-works"]{
+  display:none !important;
+}
+
+/* Only allow hamburger/menu button */
+.topbarActions .menuBtn{
+  display:inline-flex !important;
+}
+
+/* If anything else in actions still shows, hide it */
+.topbarActions > *{
+  display:none !important;
+}
+.topbarActions > .menuBtn{
+  display:inline-flex !important;
+}
+
+/* Make hamburger look consistent */
+.menuBtn{
+  width:44px !important;
+  height:44px !important;
+  border-radius:999px !important;
+  align-items:center !important;
+  justify-content:center !important;
+}
+
+/* Keep layout clean */
+.topbarActions{
+  gap:0 !important;
+  flex-wrap:nowrap !important;
+  overflow:visible !important;
+}
+
+/* Prevent weird mobile overflow */
+html, body{ overflow-x:hidden !important; }

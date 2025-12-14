@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "hela-optimizer-site",
+    "prod": "hela-optimizer-site"
+  },
+  "targets": {},
+  "etags": {}
+}

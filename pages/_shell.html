@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PAGE — PulseBoost</title>
+  <meta name="description" content="PulseBoost page." />
+    <meta name="theme-color" content="#070B14" />
+  <meta name="color-scheme" content="dark light" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="PulseBoost" />
+  <meta property="og:title" content="PulseBoost — AI Performance Optimizer" />
+  <meta property="og:description" content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="PulseBoost — AI Performance Optimizer" />
+  <meta name="twitter:description" content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
+  <link rel="manifest" href="../manifest.webmanifest" />
+<link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/overrides.v2.css" />
+</head>
+<body class="page">
+
+<header class="topbar" role="banner">
+  <div class="container topbarInner">
+    <a class="brand" href="../index.html" aria-label="PulseBoost Home">
+      <span class="brandMark" aria-hidden="true"></span>
+      <div class="brandStack">
+        <div class="brandName">PulseBoost</div>
+        <div class="brandSub">AI Performance Optimizer</div>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="navLink" href="../index.html">Home</a>
+      <a class="navLink" href="./how-it-works.html">How it works</a>
+      <a class="navLink" href="./pricing.html">Pricing</a>
+      <a class="navLink" href="./games.html">Games</a>
+      <a class="navLink" href="./contact.html">Contact</a>
+    </nav>
+
+    <div class="topbarActions">
+      <button class="actionPill" type="button" data-action="toggleTheme" aria-label="Toggle theme">
+        <span class="pillText">Theme</span>
+        <span class="kbd">T</span>
+      </button>
+
+      <button class="actionPill" type="button" data-action="openPalette" aria-haspopup="dialog" aria-controls="palette" aria-label="Search">
+        <span class="pillText">Search</span>
+        <span class="kbd">Ctrl</span><span class="kbd">K</span>
+      </button>
+
+      <button class="actionPill" type="button" data-action="signInSoon" aria-label="Sign in">
+        <span class="pillText">Sign in</span>
+        <span class="badgeMini">soon</span>
+      </button>
+
+      <a class="actionPill primary" href="./download.html" aria-label="Download">
+        <span class="pillText">Download</span>
+        <span class="kbd">Ctrl</span><span class="kbd">D</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="container pageMain">
+  <h1 class="h1">Page Title</h1>
+  <p class="p">Page content…</p>
+</main>
+
+<footer class="footer">
+  <div class="container footerInner">
+    <div class="footerLeft">
+      <span class="footerMark" aria-hidden="true"></span>
+      <div>
+        <div style="font-weight:980">PulseBoost</div>
+        <div class="footerCopy">AI Performance Optimizer • Built for gamers + power users.</div>
+      </div>
+    </div>
+    <div class="footerLinks">
+      <a href="../index.html">Home</a>
+      <a href="./how-it-works.html">How it works</a>
+      <a href="./pricing.html">Pricing</a>
+      <a href="./games.html">Games</a>
+      <a href="./contact.html">Contact</a>
+      <a href="./download.html">Download</a>
+          <a href="./security.html">Security</a>
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="./changelog.html">Changelog</a>
+</div>
+  </div>
+</footer>
+
+<div class="palette" id="palette" role="dialog" aria-modal="true" aria-hidden="true" aria-label="Command Palette">
+  <div class="paletteBackdrop paletteBackdrop" data-action="closePalette"></div>
+  <div class="palettePanel" role="document">
+    <div class="paletteTop">
+      <div class="paletteHint">
+        <span class="kbd">↑</span><span class="kbd">↓</span> navigate
+        <span class="kbd">Enter</span> run
+        <span class="kbd">Esc</span> close
+      </div>
+      <input class="paletteInput" id="paletteInput" type="text" autocomplete="off" spellcheck="false" placeholder="Type a command…" />
+    </div>
+    <div class="paletteList" id="paletteList" role="listbox" aria-label="Commands"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast" aria-live="polite" aria-atomic="true"></div>
+<script src="../js/app.js"></script>
+</body>
+</html>
+
+
+
+
