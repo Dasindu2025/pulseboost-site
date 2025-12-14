@@ -1,72 +1,51 @@
 ﻿<!doctype html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>PulseBoost — AI Performance Optimizer</title>
-  <meta name="description" content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
-    <meta name="theme-color" content="#070B14" />
+  <meta name="description"
+    content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
+  <meta name="theme-color" content="#070B14" />
   <meta name="color-scheme" content="dark light" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="PulseBoost" />
   <meta property="og:title" content="PulseBoost — AI Performance Optimizer" />
-  <meta property="og:description" content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
+  <meta property="og:description"
+    content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="PulseBoost — AI Performance Optimizer" />
-  <meta name="twitter:description" content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
+  <meta name="twitter:description"
+    content="Real-time telemetry → AI bottleneck prediction → safe reversible optimizations for smoother FPS." />
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
   <link rel="manifest" href="./manifest.webmanifest" />
-<link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="./css/style.css" />
   <link rel="stylesheet" href="./css/overrides.v2.css" />
 </head>
+
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="topbar">
-    <div class="container topbarShell">
-      <div class="topbarRow">
-        <a class="brand" href="./index.html" aria-label="PulseBoost home">
-          <span class="logo" aria-hidden="true"></span>
-          <span class="brandText">
-            <b>PulseBoost</b>
-            <span>AI Performance Optimizer</span>
-          </span>
-        </a>
-
-        <nav class="nav" aria-label="Primary">
-          <a href="./index.html" aria-current="page">Home</a>
-          <a href="./pages/how-it-works.html">How it works</a>
-          <a href="./pages/pricing.html">Pricing</a>
-          <a href="./pages/games.html">Games</a>
-          <a href="./pages/contact.html">Contact</a>
-        </nav>
-
-        <div class="topbarActions">
-          <button class="menuBtn" type="button" data-action="openDrawer" aria-label="Open menu">
-            <span class="menuIcon" aria-hidden="true"><span></span><span></span><span></span></span>
-          </button>
-          <button class="chipBtn" type="button" data-action="toggleTheme">Theme <span class="kbd">T</span></button>
-          <button class="chipBtn" type="button" data-action="openPalette">Search <span class="kbd">Ctrl</span><span class="kbd">K</span></button>
-          <a class="btn primary" data-action="download" data-href="./pages/download.html" href="./pages/download.html">Download <span class="kbd">Ctrl</span><span class="kbd">D</span></a>
-        </div>
-      </div>
-    </div>
-  </header>
+  <site-header active="home"></site-header>
 
   <main id="main" class="container hero">
     <div class="heroGrid">
       <section>
         <span class="badge"><span class="dot"></span> SYSTEM STATUS: Stable • Live monitoring enabled</span>
-        <h1 class="h1">Smooth FPS. Faster startup. <span class="subtle">Zero bloat.</span></h1>
+        <h1 class="h1">Smooth FPS. Faster startup. <br><span class="txt-rotate" data-period="2000"
+            data-rotate='[ "Zero bloat.", "Lower latency.", "Stable frame times.", "No driver hacks." ]'>Zero
+            bloat.</span></h1>
         <p class="p">
           PulseBoost reads system signals in real time, predicts bottlenecks, and applies
-          <b>safe, reversible</b> optimizations. Built for gaming + productivity — designed to stay invisible until you need it.
+          <b>safe, reversible</b> optimizations. Built for gaming + productivity — designed to stay invisible until you
+          need it.
         </p>
 
         <div class="row wrap" style="margin-top:16px">
           <a class="btn primary" href="./pages/download.html">Download for Windows</a>
           <a class="btn" href="./pages/how-it-works.html">View Docs</a>
-          <button class="btn ghost" data-action="runDemo" type="button">Run Live Demo</button>
+          <button class="btn ghost" onclick="startPulseBoostDemo()" type="button">Run Live Demo</button>
         </div>
 
         <div class="row wrap" style="margin-top:12px">
@@ -100,9 +79,11 @@
           <div class="row spread">
             <div>
               <div style="font-weight:950;font-size:16px">Active Optimization Event</div>
-              <div class="small">Simulated telemetry • press <span class="kbd">Ctrl</span><span class="kbd">K</span></div>
+              <div class="small">Simulated telemetry • press <span class="kbd">Ctrl</span><span class="kbd">K</span>
+              </div>
             </div>
-            <span class="badge"><span class="dot" style="background:var(--brand2); box-shadow:0 0 0 6px rgba(0,212,255,.14)"></span> Monitoring</span>
+            <span class="badge"><span class="dot"
+                style="background:var(--brand2); box-shadow:0 0 0 6px rgba(0,212,255,.14)"></span> Monitoring</span>
           </div>
 
           <div class="hr"></div>
@@ -128,14 +109,17 @@
             </div>
           </div>
 
-          <div class="sparkWrap" aria-label="Live telemetry sparkline">
-            <canvas id="spark"></canvas>
+          <div class="telemetryGraph" style="height:140px; margin-top:16px; position:relative; z-index:1;">
+            <telemetry-graph></telemetry-graph>
           </div>
 
           <div class="miniGrid" style="margin-top:10px">
-            <div class="mini"><span class="small">CPU</span><b id="m_cpu">42%</b><span class="muted">Smoothed</span></div>
-            <div class="mini"><span class="small">GPU</span><b id="m_gpu">56%</b><span class="muted">Queue OK</span></div>
-            <div class="mini"><span class="small">FPS</span><b id="m_fps">115 fps</b><span class="muted">Stable</span></div>
+            <div class="mini"><span class="small">CPU</span><b id="m_cpu">42%</b><span class="muted">Smoothed</span>
+            </div>
+            <div class="mini"><span class="small">GPU</span><b id="m_gpu">56%</b><span class="muted">Queue OK</span>
+            </div>
+            <div class="mini"><span class="small">FPS</span><b id="m_fps">115 fps</b><span class="muted">Stable</span>
+            </div>
           </div>
 
           <div class="row wrap right" style="margin-top:12px">
@@ -151,7 +135,8 @@
       <div class="tlTop">
         <div>
           <h2 class="h2">Optimization timeline</h2>
-          <p class="p">A calm, observable loop: detect deviation → infer cause → apply minimal reversible action → verify stability.</p>
+          <p class="p">A calm, observable loop: detect deviation → infer cause → apply minimal reversible action →
+            verify stability.</p>
         </div>
         <div class="row wrap">
           <span class="badge">No permanent changes</span>
@@ -184,89 +169,29 @@
       </div>
     </section>
 
-    <div class="section">
-      <h2 class="h2">Keyboard-first power</h2>
-      <p class="p">Press <span class="kbd">Ctrl</span><span class="kbd">K</span> for Command Palette, <span class="kbd">T</span> for theme, <span class="kbd">Ctrl</span><span class="kbd">D</span> to download.</p>
-    </div>
   </main>
 
-  <!-- Drawer -->
-  <div class="drawer" id="drawer" aria-hidden="true">
-    <div class="drawerBg"></div>
-    <div class="drawerPanel" role="dialog" aria-modal="true" aria-label="Menu">
-      <div class="drawerTop">
-        <div class="drawerTitle">PulseBoost</div>
-        <button class="drawerClose" type="button" data-action="closeDrawer" aria-label="Close menu">✕</button>
-      </div>
-      <div class="drawerBody">
-        <nav class="drawerNav" aria-label="Mobile">
-          <a href="./index.html">Home</a>
-          <a href="./pages/how-it-works.html">How it works</a>
-          <a href="./pages/pricing.html">Pricing</a>
-          <a href="./pages/games.html">Games</a>
-          <a href="./pages/contact.html">Contact</a>
-          <a href="./pages/download.html">Download</a>
-        </nav>
-      </div>
-      <div class="drawerActions">
-        <button class="btn ghost" type="button" data-action="toggleTheme">Theme</button>
-        <button class="btn" type="button" data-action="openPalette">Search</button>
-        <a class="btn primary" href="./pages/download.html">Download</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- Palette -->
-  <div class="drawer" id="palette" data-open="false" aria-hidden="true">
-    <div class="drawerBg" data-action="closePalette"></div>
-    <div class="drawerPanel" role="dialog" aria-modal="true" aria-label="Command palette">
-      <div class="drawerTop">
-        <div class="drawerTitle">Command palette</div>
-        <button class="drawerClose" type="button" data-action="closePalette" aria-label="Close palette">✕</button>
-      </div>
-      <div class="drawerBody">
-        <input id="palInput" class="chipBtn" style="width:100%; justify-content:flex-start" placeholder="Type to filter (docs, pricing, games...)" />
-        <div style="height:12px"></div>
-        <div class="drawerNav">
-          <a data-cmd="home" href="./index.html">Go: Home</a>
-          <a data-cmd="how docs pipeline diagnostics" href="./pages/how-it-works.html">Go: How it works</a>
-          <a data-cmd="pricing plans matrix" href="./pages/pricing.html">Go: Pricing</a>
-          <a data-cmd="games lab profiles" href="./pages/games.html">Go: Games</a>
-          <a data-cmd="contact support" href="./pages/contact.html">Go: Contact</a>
-          <a data-cmd="download windows" href="./pages/download.html">Go: Download</a>
-        </div>
-      </div>
-      <div class="drawerActions">
-        <button class="btn ghost" type="button" data-action="toggleTheme">Toggle theme</button>
-        <a class="btn primary" href="./pages/download.html">Download</a>
-      </div>
-    </div>
-  </div>
+  <!-- Overlays (Drawer) -->
+  <site-overlays></site-overlays>
 
   <div class="toast" id="toast" aria-live="polite"></div>
 
-  <footer>
-    <div class="container footerRow">
-      <div class="small"><b>PulseBoost</b> <span class="subtle">— Performance Optimizer for gaming + power users.</span></div>
-      <div class="footerLinks">
-        <a href="./index.html">Home</a>
-        <a href="./pages/how-it-works.html">How it works</a>
-        <a href="./pages/pricing.html">Pricing</a>
-        <a href="./pages/games.html">Games</a>
-        <a href="./pages/contact.html">Contact</a>
-        <a href="./pages/download.html">Download</a>
-            <a href="./pages/security.html">Security</a>
-      <a href="./pages/privacy.html">Privacy</a>
-      <a href="./pages/terms.html">Terms</a>
-      <a href="./pages/changelog.html">Changelog</a>
-</div>
-    </div>
-  </footer>
+  <site-footer></site-footer>
 
+  <interactive-console></interactive-console>
+
+  <pulse-bot></pulse-bot>
+
+  <script src="./js/console.js"></script>
+  <script src="./js/spotlight.js"></script>
+  <script src="./js/telemetry.js"></script>
+  <script src="./js/reveal.js"></script>
+  <script src="./js/chatbot.js"></script>
+  <script src="./js/writer.js"></script>
+  <script src="./js/installer.js"></script>
+
+  <script src="./js/components.js"></script>
   <script src="./js/app.js"></script>
 </body>
+
 </html>
-
-
-
-

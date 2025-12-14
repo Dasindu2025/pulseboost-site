@@ -1,5 +1,6 @@
 ﻿<!doctype html>
 <html lang="en" data-theme="dark">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
@@ -12,130 +13,62 @@
   <link rel="stylesheet" href="../css/style.css" />
   <link rel="stylesheet" href="../css/overrides.v2.css" />
 </head>
+
 <body>
-<a class="skip" href="#main">Skip to content</a>
+  <a class="skip" href="#main">Skip to content</a>
 
-<header class="topbar">
-  <div class="container topbarShell">
-    <div class="topbarRow">
-      <a class="brand" href="../index.html" aria-label="PulseBoost home">
-        <span class="logo" aria-hidden="true"></span>
-        <span class="brandText"><b>PulseBoost</b><span>AI Performance Optimizer</span></span>
-      </a>
-      <nav class="nav" aria-label="Primary">
-        <a href="../index.html">Home</a>
-        <a href="./how-it-works.html">How it works</a>
-        <a href="./pricing.html">Pricing</a>
-        <a href="./games.html">Games</a>
-        <a href="./contact.html">Contact</a>
-      </nav>
-      <div class="topbarActions">
-        <button class="menuBtn" type="button" data-action="openDrawer" aria-label="Open menu">
-          <span class="menuIcon" aria-hidden="true"><span></span><span></span><span></span></span>
-        </button>
-        <button class="chipBtn" type="button" data-action="toggleTheme">Theme <span class="kbd">T</span></button>
-        <button class="chipBtn" type="button" data-action="openPalette">Search <span class="kbd">Ctrl</span><span class="kbd">K</span></button>
-        <a class="btn primary" href="./download.html">Download</a>
+  <site-overlays base=".."></site-overlays>
+  <site-header base=".."></site-header>
+
+  <main id="main" class="container hero">
+    <span class="badge"><span class="dot"></span> SECURITY</span>
+    <h1 class="h1">Secure by design. <span class="subtle">Observable by default.</span></h1>
+    <p class="p">PulseBoost is built around reversibility, bounded actions, and clear explainability. It avoids kernel
+      hooks and driver tricks.</p>
+
+    <section class="section">
+      <h2 class="h2">Core guarantees</h2>
+      <div class="miniGrid">
+        <div class="mini"><span class="small">REVERSIBILITY</span><b>Rollback always</b>
+          <div class="small">Every action produces a rollback path and can be reverted quickly.</div>
+        </div>
+        <div class="mini"><span class="small">NO KERNEL HACKS</span><b>No unsigned drivers</b>
+          <div class="small">No injections. No hidden system mutations.</div>
+        </div>
+        <div class="mini"><span class="small">GUARDRAILS</span><b>Bounded envelopes</b>
+          <div class="small">Actions are constrained; out-of-policy actions are rejected.</div>
+        </div>
       </div>
-    </div>
-  </div>
-</header>
+    </section>
 
-<main id="main" class="container hero">
-  <span class="badge"><span class="dot"></span> SECURITY</span>
-  <h1 class="h1">Secure by design. <span class="subtle">Observable by default.</span></h1>
-  <p class="p">PulseBoost is built around reversibility, bounded actions, and clear explainability. It avoids kernel hooks and driver tricks.</p>
-
-  <section class="section">
-    <h2 class="h2">Core guarantees</h2>
-    <div class="miniGrid">
-      <div class="mini"><span class="small">REVERSIBILITY</span><b>Rollback always</b><div class="small">Every action produces a rollback path and can be reverted quickly.</div></div>
-      <div class="mini"><span class="small">NO KERNEL HACKS</span><b>No unsigned drivers</b><div class="small">No injections. No hidden system mutations.</div></div>
-      <div class="mini"><span class="small">GUARDRAILS</span><b>Bounded envelopes</b><div class="small">Actions are constrained; out-of-policy actions are rejected.</div></div>
-    </div>
-  </section>
-
-  <section class="section">
-    <h2 class="h2">Responsible reporting</h2>
-    <div class="card"><div class="cardBody">
-      <div class="small">If you discover a security issue, contact:</div>
-      <div style="height:10px"></div>
-      <div class="row wrap">
-        <span class="badge">security@pulseboost.ai</span>
-        <span class="badge">No public disclosure until patched</span>
+    <section class="section">
+      <h2 class="h2">Responsible reporting</h2>
+      <div class="card">
+        <div class="cardBody">
+          <div class="small">If you discover a security issue, contact:</div>
+          <div style="height:10px"></div>
+          <div class="row wrap">
+            <span class="badge">security@pulseboost.ai</span>
+            <span class="badge">No public disclosure until patched</span>
+          </div>
+          <div style="height:10px"></div>
+          <div class="small">Replace with your real email before launch.</div>
+        </div>
       </div>
-      <div style="height:10px"></div>
-      <div class="small">Replace with your real email before launch.</div>
-    </div></div>
-  </section>
-</main>
+    </section>
+  </main>
 
-<div class="drawer" id="drawer" aria-hidden="true">
-  <div class="drawerBg"></div>
-  <div class="drawerPanel" role="dialog" aria-modal="true" aria-label="Menu">
-    <div class="drawerTop"><div class="drawerTitle">PulseBoost</div>
-      <button class="drawerClose" type="button" data-action="closeDrawer" aria-label="Close menu">✕</button>
-    </div>
-    <div class="drawerBody">
-      <nav class="drawerNav" aria-label="Mobile">
-        <a href="../index.html">Home</a><a href="./how-it-works.html">How it works</a><a href="./pricing.html">Pricing</a>
-        <a href="./games.html">Games</a><a href="./contact.html">Contact</a><a href="./download.html">Download</a>
-        <a href="./security.html">Security</a><a href="./privacy.html">Privacy</a><a href="./terms.html">Terms</a><a href="./changelog.html">Changelog</a>
-      </nav>
-    </div>
-    <div class="drawerActions">
-      <button class="btn ghost" type="button" data-action="toggleTheme">Theme</button>
-      <button class="btn" type="button" data-action="openPalette">Search</button>
-      <a class="btn primary" href="./download.html">Download</a>
-    </div>
-  </div>
-</div>
 
-<div class="drawer" id="palette" data-open="false" aria-hidden="true">
-  <div class="drawerBg" data-action="closePalette"></div>
-  <div class="drawerPanel" role="dialog" aria-modal="true" aria-label="Command palette">
-    <div class="drawerTop"><div class="drawerTitle">Command palette</div>
-      <button class="drawerClose" type="button" data-action="closePalette" aria-label="Close palette">✕</button>
-    </div>
-    <div class="drawerBody">
-      <input id="palInput" class="chipBtn" style="width:100%; justify-content:flex-start" placeholder="Type to filter (docs, pricing, games...)" />
-      <div style="height:12px"></div>
-      <div class="drawerNav">
-        <a data-cmd="home" href="../index.html">Go: Home</a>
-        <a data-cmd="security" href="./security.html">Go: Security</a>
-        <a data-cmd="privacy" href="./privacy.html">Go: Privacy</a>
-        <a data-cmd="terms" href="./terms.html">Go: Terms</a>
-        <a data-cmd="changelog" href="./changelog.html">Go: Changelog</a>
-      </div>
-    </div>
-    <div class="drawerActions">
-      <button class="btn ghost" type="button" data-action="toggleTheme">Toggle theme</button>
-      <a class="btn primary" href="./download.html">Download</a>
-    </div>
-  </div>
-</div>
 
-<div class="toast" id="toast" aria-live="polite"></div>
+  <div class="toast" id="toast" aria-live="polite"></div>
 
-<footer>
-  <div class="container footerRow">
-    <div class="small"><b>PulseBoost</b> <span class="subtle">— Safety-first optimizer • observable decisions.</span></div>
-    <div class="footerLinks">
-      <a href="../index.html">Home</a>
-      <a href="./how-it-works.html">How it works</a>
-      <a href="./pricing.html">Pricing</a>
-      <a href="./games.html">Games</a>
-      <a href="./contact.html">Contact</a>
-      <a href="./security.html">Security</a>
-      <a href="./privacy.html">Privacy</a>
-      <a href="./terms.html">Terms</a>
-      <a href="./changelog.html">Changelog</a>
-    </div>
-  </div>
-</footer>
+  <site-footer base=".."></site-footer>
 
-<script src="../js/app.js"></script>
+  <script src="../js/components.js"></script>
+  <script src="../js/spotlight.js"></script>
+  <script src="../js/command-palette.js"></script>
+  <script src="../js/reveal.js"></script>
+  <script src="../js/app.js"></script>
 </body>
+
 </html>
-
-
