@@ -1,0 +1,70 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — PulseBoost</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner" data-nav>
+      <a class="brand" href="./index.html"><span class="logo"></span><span>PulseBoost</span></a>
+      <nav class="navlinks">
+        <a href="./download.html">Download</a><a href="./premium.html">Premium</a><a href="./games.html">Games</a><a href="./how.html">How it works</a><a href="./contact.html">Contact</a>
+        <a class="btn primary nav-cta" href="./download.html">Download</a>
+      </nav>
+      <button class="btn menu-btn" data-menu-btn aria-expanded="false">Menu</button>
+    </div>
+    <div class="container mobile" data-mobile hidden>
+      <a href="./download.html">Download</a><a href="./premium.html">Premium</a><a href="./games.html">Games</a><a href="./how.html">How it works</a><a href="./contact.html">Contact</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="card pad">
+        <div class="kicker"><span class="dot"></span> Contact</div>
+        <h1>Talk to us.</h1>
+        <p class="lead">Request a game, report a bug, or ask about Premium.</p>
+
+        <div class="grid3" style="margin-top:12px">
+          <div class="tile">
+            <h3>Email</h3>
+            <p class="muted">support@pulseboost.gg (replace later)</p>
+          </div>
+          <div class="tile">
+            <h3>Discord</h3>
+            <p class="muted">Community server (replace later)</p>
+          </div>
+          <div class="tile">
+            <h3>Feedback</h3>
+            <p class="muted">We ship improvements based on gamers.</p>
+          </div>
+        </div>
+
+        <hr class="sep" />
+
+        <h2>Send a message</h2>
+        <form onsubmit="event.preventDefault(); alert('Later we will connect this to Firebase Firestore.');">
+          <div style="display:grid; gap:10px; grid-template-columns:1fr 1fr;">
+            <input class="input" placeholder="Your name" required />
+            <input class="input" placeholder="Email" type="email" required />
+          </div>
+          <div style="margin-top:10px">
+            <textarea placeholder="Message" required></textarea>
+          </div>
+          <div class="actions" style="margin-top:12px">
+            <button class="btn primary" type="submit">Send</button>
+            <a class="btn" href="./download.html">Download</a>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <div class="footer">© PulseBoost</div>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
